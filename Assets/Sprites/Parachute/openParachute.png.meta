@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      openParachute_0: 8896722933656700276
+      openParachute_1: -382131816272851793
+      openParachute_2: -1149536945217377262
+      openParachute_3: -8057706962899624395
+      openParachute_4: 2254183503747304421
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

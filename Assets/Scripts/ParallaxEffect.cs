@@ -14,7 +14,7 @@ public class ParallaxEffect : MonoBehaviour
     {
         _cameraTransform = Camera.main.transform;
 
-        AdaptarAnchoAPantalla();
+        AdaptWidthToScreen();
 
         _previousCameraPos = _cameraTransform.position;
         _spriteHeight = GetComponent<SpriteRenderer>().bounds.size.y;
@@ -41,7 +41,7 @@ public class ParallaxEffect : MonoBehaviour
         }
     }
 
-    private void AdaptarAnchoAPantalla()
+    private void AdaptWidthToScreen()
     {
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (sr == null || sr.sprite == null) return;
@@ -52,6 +52,8 @@ public class ParallaxEffect : MonoBehaviour
         float spriteWidth = sr.sprite.bounds.size.x;
 
         float scaleFactor = cameraWidth / spriteWidth;
+
+        scaleFactor = Mathf.Max(1f, scaleFactor);
 
         transform.localScale = new Vector3(scaleFactor, scaleFactor, 1f);
     }
